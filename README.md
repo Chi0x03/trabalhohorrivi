@@ -14,23 +14,25 @@ Para configurar uma rede no Cisco Packet Tracer onde 10 computadores e um servid
 ### Passo 2: Configuração do Roteador
 1. *Configurar interface do roteador:*
    - Acesse o roteador e entre no modo de configuração global:
-     
+     ```
      enable
      configure terminal
      interface FastEthernet0/0
      ip address 192.168.1.1 255.255.255.0
      no shutdown
      exit
+     ```
      
 
 2. *Configurar o DHCP no roteador:*
    - Configure o DHCP para fornecer endereços IP aos PCs:
-     
+     ```
      ip dhcp pool empresa
      network 192.168.1.0 255.255.255.0
      default-router 192.168.1.1
      dns-server 192.168.1.2
      exit
+     ```
      
 
 ### Passo 3: Configuração do Servidor
@@ -62,7 +64,7 @@ Para configurar uma rede no Cisco Packet Tracer onde 10 computadores e um servid
 Aqui está um resumo das configurações:
 
 *Roteador:*
-
+```
 enable
 configure terminal
 interface FastEthernet0/0
@@ -75,7 +77,7 @@ network 192.168.1.0 255.255.255.0
 default-router 192.168.1.1
 dns-server 192.168.1.2
 exit
-
+```
 
 *Servidor (configuração via GUI):*
 - IP estático: 192.168.1.2
